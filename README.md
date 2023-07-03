@@ -2,12 +2,12 @@
 
 Group-5
 
-Anuj Patel
+Anuj Patel - Home page
 
-Md Amir 
+Md Amir  - Payment page
 
-Nitin Singh
+Nitin Singh - sig in / sig up 
 
-Anshul Gusain
+Anshul Gusain - Product Page
 
-Sanjeev Kushwaha
+Sanjeev Kushwaha - Cart Page

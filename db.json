@@ -25,25 +25,8 @@
                     "strMealThumb": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg",
                     "idMeal": "52868",
                     "cost":"₹234"
-                  },
-                  {
-                    "strMeal": "Lamb Biryani",
-                    "strMealThumb": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",
-                    "idMeal": "52805",
-                    "cost":"₹453"
-                  },
-                  {
-                    "strMeal": "Lamb Rogan josh",
-                    "strMealThumb": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg",
-                    "idMeal": "52808",
-                    "cost":"₹250"
-                  },
-                  {
-                    "strMeal": "Matar Paneer",
-                    "strMealThumb": "https://www.themealdb.com/images/media/meals/xxpqsy1511452222.jpg",
-                    "idMeal": "52865",
-                    "cost":"₹550"
                   }
+              
                   
         ]
     

@@ -4,12 +4,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    margin-top: -35px;
 }
 
 .logo {
     cursor: pointer;
     height: 130px;
+    
 
 }
 

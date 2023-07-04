@@ -9,17 +9,15 @@
 .title {
     margin: 20%;
 }
-h1 {
+
+.title > h1 {
     font-size: 70px;
     font-family: 'Kalam', cursive;
     margin-bottom: -30px;
 }
-h3 {
+.title > h3 {
     font-size: 35px;
     font-family: 'Satisfy', cursive;
-    
-}
-.title > h3 {
     color: rgb(255,92,0);
 }
 
@@ -57,7 +55,82 @@ h3 {
 
 .photo {
     width: 100%;
-    border: 2px solid red;
     border-radius: 20px;
     
 }
+
+.photo ~ h3 {
+    color: rgb(255, 254, 254);
+    font-size: 30px;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    margin-top: -58px;
+    
+    
+}
+
+.container3 > h2 {
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 35px;
+}
+
+.kitchen-pic {
+    text-align: center;
+    
+}
+
+.about {
+    background-color: rgb(1,15,41);
+    margin: 0 23.4%; 
+    border-radius: 0 0 0 90px;
+    height: 250px;
+}
+.about > p {
+    text-align-last: justify;
+    margin-top: -4px ;
+    padding: 20px 90px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.subscribe{
+    font-size: 20px;
+    text-align-last: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255,92,0);
+}
+
+.contact {
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    font-size: 35px;
+}
+
+.container4 {
+    display: flex;
+}
+.left-add {
+    margin-left: 5%;
+    border: 2px solid green;
+}
+.address {
+    margin-top: 10px;
+    border: 2px solid red;
+}
+
+.address > h3 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right-map {
+    margin-left: 40%;
+    border: 2px solid black;
+    text-align: right;
+    width: 100%;
+
+}
+

@@ -1,9 +1,33 @@
 #parent{
+    font-family: 'Lobster';
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 40px ;
+    justify-content: center;
+    text-align: center;
+    
 
 }
+#parent div{
+    color:rgb(161,166,175);
+    background-color: rgb(1,15,41);
+    margin-top: 50px;
+    border-radius: 20px;
+}
 #parent img{
-    height: 200px;
-    width: 100px;
+    height: 150px;
+    width: 70%;
+    border-radius: 100%;
+    margin-top: -20%;
+
+}
+
+button{
+   background-color: rgb(255,212,62);
+   border-radius: 15px;
+   height: 40px;
+   width: 130px;
+   padding: 5px;
+   margin-bottom: -50%;
 }

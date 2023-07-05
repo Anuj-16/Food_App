@@ -1,25 +1,11 @@
 {
   "Data": [
     {
-      "img": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg",
-      "title": "Kidney Bean Curry",
-      "description": "This delicious vegetarian stew is made in the pressure cooker, using dried kidney beans and a spice paste with garlic, ginger, and onion.",
-      "price": 234,
-      "id": 4
-    },
-    {
-      "img": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
-      "title": "Chicken Handi",
-      "description": " Handi chicken is a delicious dish made with chicken cooked on a low flame for a long time.",
-      "price": 899,
-      "id": 5
-    },
-    {
-      "img": "https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg",
-      "title": "Dal fry",
-      "description": "Dal Fry is a delicious and popular Indian lentil recipe that is made with tuvar dal (pigeon pea lentils), onions, tomatoes and spices.",
-      "price": 670,
-      "id": 6
+      "img": "https://www.themealdb.com/images/media/meals/ypxvwv1505333929.jpg",
+      "title": "Crock Pot Chicken Baked Tacos",
+      "description": "Put the uncooked chicken breasts in the crock pot. Pour the full bottle of salad dressing over the chicken. Sprinkle the rest of the ingredients over the top and mix them in a bit with a spoon.\r\nCover your crock pot with the lid and cook on high for 4 hours.",
+      "price": 499,
+      "id": 1
     }
   ]
 }

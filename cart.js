@@ -1,7 +1,7 @@
 let item1=document.getElementById("items1");
 let priceItems=document.getElementById("priceItems");
 let cart1 = JSON.parse(localStorage.getItem("cart1")) || [];
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
 showData();
 async function showData(){
@@ -17,7 +17,7 @@ async function showData(){
 }
 // console.log(data);
 
- console.log(cart)
+
 //  cartData1(cart);
 //  function cartData1(cart){
 //      PostData(cart)
@@ -280,7 +280,13 @@ function priceData1(el){
 
 function priceDataDelete(el){
   if(priceItems.innerHTML>=el.price){
-    priceItems.innerHTML=+(priceItems.innerHTML)-el.price;
+   let dt=+(priceItems.innerHTML)-el.price;
+   if(dt<el.price){
+    priceItems.innerHTML=dt+el.price;
+   }
+   else{
+    priceItems.innerHTML=dt;
+   }
   }
  
   

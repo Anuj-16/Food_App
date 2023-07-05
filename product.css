@@ -1,3 +1,6 @@
+#navbar{
+    margin-bottom: 200px;
+}
 #parent{
     font-family: 'Lobster';
     padding: 40px;
@@ -31,3 +34,31 @@ button{
    padding: 5px;
    margin-bottom: -50%;
 }
+#btn_div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.pizza-button {
+    display: inline-block;
+    background-color: #FAC810;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+   
+  }
+  
+  .pizza-button:hover {
+    background-color: #FFB30F;
+    cursor: pointer;
+  }
+  
+  .pizza-button:active {
+    background-color: #E6970F;
+  }
+  
+  

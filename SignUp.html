@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
+    <title>Document</title>
 </head>
 <body>
-    
+   <form action=""id="registration_form">
+    <div>
+        <div>
+            <label for="">username</label>
+            <input type="text" name="" placeholder="name"id="name">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="" placeholder="Email"id="email">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="" placeholder="Password"id="password" autocomplete="on">
+            
+        </div>
+        <button type="button" id="register">SignUp</button>
+       </div>
+   </form>
+<a href="./Signin.html" id="logout">SignIn</a>
 </body>
 </html>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  //import { getAuth, signOut } from "firebase/auth";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyChYl6ToRTK9bPEU64B-61ExdxjvajwI1Q",
+    authDomain: "mydataprojectunit-5.firebaseapp.com",
+    projectId: "mydataprojectunit-5",
+    storageBucket: "mydataprojectunit-5.appspot.com",
+    messagingSenderId: "1057363724677",
+    appId: "1:1057363724677:web:638a5a4e7e03396a741cec"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  console.log(app)
+
+
+const auth = getAuth();
+
+document.getElementById("register").addEventListener("click",()=>{
+
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+let user=document.getElementById("name").value;
+
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert("Registration Successfully")
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    alert("Already Registration")
+    // ..
+  });
+
+
+})
+
+
+
+
+
+
+
+
+</script>

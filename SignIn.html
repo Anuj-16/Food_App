@@ -3,10 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn</title>
+    <title>Document</title>
 </head>
 <body>
-    
-    
+    <div>
+        <button id="logout" style="display: none;">Logout</button>
+    </div>
+    <form action="">
+        <div>
+            <div>
+                <label for="email">Email </label>
+                    <input type="text" name="Login_email" id="login_email"placeholder="Enter Your Email">
+              
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password"placeholder="Enter your password"autocomplete='on'>
+            </div>
+            <div>
+                <button id="login"type="button"name="login">Login</button>
+            </div>
+        </div>
+    </form>
+    <a href="./SignUp.html">Signup</a>
 </body>
 </html>
+<script type="module">
+      // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+ // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyChYl6ToRTK9bPEU64B-61ExdxjvajwI1Q",
+    authDomain: "mydataprojectunit-5.firebaseapp.com",
+    projectId: "mydataprojectunit-5",
+    storageBucket: "mydataprojectunit-5.appspot.com",
+    messagingSenderId: "1057363724677",
+    appId: "1:1057363724677:web:638a5a4e7e03396a741cec"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  console.log(app)
+
+
+  document.getElementById("login").addEventListener("click",()=>{
+    let email=document.getElementById("login_email").value;
+    let password=document.getElementById("password").value;
+    const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert("Login Successfully")
+    document.getElementById("logout").style.display="block"
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert("Not Login Try again")
+  });
+  })
+
+
+
+
+</script>

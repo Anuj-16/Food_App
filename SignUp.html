@@ -16,7 +16,7 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" required id="name">
           </div>
           <div class="input-box">
             <span class="details">Username</span>
@@ -24,7 +24,7 @@
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" placeholder="Enter your email" required id="email">
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
@@ -32,11 +32,11 @@
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <input type="text" placeholder="Enter your password" required id="password">
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <input type="text" placeholder="Confirm your password" required id="conform-password">
           </div>
         </div>
         <div class="gender-details">
@@ -55,12 +55,12 @@
           </label>
           <label for="dot-3">
             <span class="dot three"></span>
-            <span class="gender">Prefer not to say</span>
+            <span class="gender">Trans-gender</span>
             </label>
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" value="Register"id="register">
         </div>
       </form>
       Already a member? <a href="SignIn.html">SignIn</a>
@@ -94,32 +94,42 @@
 
 
 const auth = getAuth();
-
-document.getElementById("register").addEventListener("click",()=>{
-
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-let user=document.getElementById("name").value;
-
-
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    alert("Registration Successfully")
-    console.log(user)
-    // ...
+let pass1=document.getElementById("password").value;
+let Conf_pass=document.getElementById("conform-password").value;
+if(pass1==Conf_pass){
+  document.getElementById("register").addEventListener("click",()=>{
+  
+  let email=document.getElementById("email").value;
+  let password=document.getElementById("password").value;
+  let user=document.getElementById("name").value;
+  
+  
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      alert("Registration Successfully")
+      window.location.href="signIn.html"
+      console.log(user)
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      alert("Already Registration")
+      window.location.href="signIn.html"
+      // ..
+    });
+  
+  
   })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(errorMessage);
-    alert("Already Registration")
-    // ..
-  });
 
+}
+else{
+  alert("fill the correct password")
+}
 
-})
 
 
 

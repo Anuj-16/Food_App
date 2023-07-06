@@ -1,0 +1,50 @@
+body{
+    width: 80%;
+    margin: auto;
+    font-family: Inter, sans-serif;
+}
+#address_navbar{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    margin-bottom: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+#pay_method>p:first-child{
+    font-weight: 600;
+    font-size: xx-large;
+    margin-bottom: -10px;
+}
+#pay_method>p:last-child{
+    margin-bottom: 50px;
+}
+#pay_option{
+    font-weight: 600;
+    font-size: larger;
+}
+.pay_opt{
+    display: flex;
+    width: 40%;
+    border: 1px solid;
+    border-right: none;
+    background-color: rgb(247, 247, 247);
+    padding: 15px;
+    cursor: pointer;
+}
+#child1{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+}
+.pay_opt img{
+    width: 24px;
+    height: 24px;
+    padding: 10px 10px;
+    opacity: 0.42;
+}
+.pay_opt p{
+    vertical-align: super;
+}
+

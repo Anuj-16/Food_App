@@ -47,4 +47,83 @@ body{
 .pay_opt p{
     vertical-align: super;
 }
+#main_container{
+    display: flex;
+    
+}
+#payment_divShow{
+    /* border: 1px solid; */
+    margin-left: -250px;
+    margin-right: 100px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+#box2>div img{
+    width: 30px;
+    height: 100%;
+    
+    
+}
+#box2>div input{
+    margin: 10px 0px 10px 0px;
+    
+}
+#box2>div button{
+    margin-top: 10px;
+    padding: 10px 90px;
+    background-color: #fdd835;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+.card_input{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    
+}
+#span{
+    color: #d0af1f;
+    cursor: pointer;
+}
+#box2>div>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#wallet_div{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 0px 10px 0px 10px;
+    
+}
+#wallet_child2{
+    margin-left: 20px;
+}
+#wallet_child2 h3{
+    margin-bottom: -10px;
+}
+#top{
+    font-size: large;
+    font-weight: 600;
+    border: 1px solid gray;
+    text-align: center;
+}
+#wallet_inp input{
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    
+}
+#wall_btn{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #fdd835;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
 

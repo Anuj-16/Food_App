@@ -27,7 +27,7 @@ async function showData(){
 //  }
 function Appendata(data){
   //item1.innerText=data.length;
-  if (data.length==0) {
+  if (data.length==0&&cart.length==0) {
     console.log("empty");
   
     let main = document.getElementById("main1");

@@ -147,7 +147,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(cart)
 
 
-// showMeData(cart);
+showMeData(cart);
 
 // function showMeData(data){
 //  for(var i=0;i<data.length;i++){
@@ -156,77 +156,87 @@ console.log(cart)
 // }
 
 
-// function showMeData(data){
-//   let main1 = document.getElementById("main1");
-//   data.forEach((el,idx) => {
-//     let div = document.createElement("div");
-//     div.setAttribute("id", "main11");
+function showMeData(data){
+  priceData(data);
+  let main1 = document.getElementById("main1");
+  data.forEach((el,idx) => {
+    let div = document.createElement("div");
+    div.setAttribute("id", "main11");
 
-//     let div1 = document.createElement("div");
-//     div1.setAttribute("id", "main111");
-//     let img = document.createElement("img");
-//     img.src = el.img;
-//     div1.append(img);
+    let div1 = document.createElement("div");
+    div1.setAttribute("id", "main111");
+    let img = document.createElement("img");
+    img.src = el.img;
+    div1.append(img);
 
-//     let div2 = document.createElement("div");
+    let div2 = document.createElement("div");
 
-//     let strMeal = document.createElement("h2");
-//     strMeal.innerHTML = el.title;
-//     let desc=document.createElement("p")
-//     desc.innerHTML=el.description;
+    let strMeal = document.createElement("h2");
+    strMeal.innerHTML = el.title;
+    let desc=document.createElement("p")
+    desc.innerHTML=el.description;
 
-//     let price = document.createElement("h4");
-//     price.setAttribute("id","priceNum")
-//     price.innerHTML = "₹"+el.price;
-// let div3=document.createElement("div")
+    let price = document.createElement("h4");
+    price.setAttribute("id","priceNum")
+    price.innerHTML = "₹"+el.price;
+let div3=document.createElement("div")
 
-// let btn1 = document.createElement("button");
-// btn1.innerHTML = "+";
-// btn1.setAttribute("class", "plus");
-// btn1.addEventListener("click",()=>{
-//  priceData1(el);
-// })
-// let btn2 = document.createElement("button");
-// btn2.innerHTML = "-";
-// btn2.addEventListener("click",()=>{
-//   priceDataDelete(el);
-// })
-// btn2.setAttribute("class", "plus");
-// let btn3 = document.createElement("button");
-// btn3.innerHTML = "Delete";
-// btn3.addEventListener("click",()=>{
+let btn1 = document.createElement("button");
+btn1.innerHTML = "+";
+btn1.setAttribute("class", "plus");
+btn1.addEventListener("click",()=>{
+ priceData1(el);
+})
+let btn2 = document.createElement("button");
+btn2.innerHTML = "-";
+btn2.addEventListener("click",()=>{
+  priceDataDelete(el);
+})
+btn2.setAttribute("class", "plus");
+
+let btn3 = document.createElement("button");
+btn3.innerHTML = "Delete";
+btn3.addEventListener("click",()=>{
 //  cart.splice(idx,1)
 //  localStorage.setItem("cart",JSON.stringify(cart))
 
-//   console.log(cart)
+deleteData1(el,idx)
 
-// })
-// let btn4=document.createElement("button");
-// btn4.setAttribute("class", "plus");
-//   btn4.setAttribute("id","btn44");
-//   btn4.innerHTML="Buy"
-//   btn4.addEventListener("click",()=>{
+  console.log(cart)
+
+})
+let btn4=document.createElement("button");
+btn4.setAttribute("class", "plus");
+  btn4.setAttribute("id","btn44");
+  btn4.innerHTML="Buy"
+  btn4.addEventListener("click",()=>{
     
-//   })
+  })
 
-// btn3.setAttribute("class", "plus");
+btn3.setAttribute("class", "plus");
 
 
-// div3.append(btn1,btn2,btn3,btn4)
+div3.append(btn1,btn2,btn3,btn4)
    
-//     div2.append(strMeal,desc, price, div3);
-//     div.append(div1, div2);
+    div2.append(strMeal,desc, price, div3);
+    div.append(div1, div2);
 
-//     main1.append(div);
-//   });
-// }
+    main1.append(div);
+  });
+}
 
-// function deleteData1(idx){
-//   let del=cart.splice(idx,1);
-//   console.log(del);
 
-//   showMeData(cart)
-// }
+
+function deleteData1(el,idx){
+  cart.splice(idx,1);
+  showMeData(cart)
+  localStorage.setItem("cart",JSON.stringify(cart))
+location.href="cart.html"
+
+}
+
+
+
 
 let paginationData = document.getElementById("pagination");
 paginationData.innerHTML = null;

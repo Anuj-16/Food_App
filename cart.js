@@ -1,20 +1,31 @@
 let item1=document.getElementById("items1");
 let priceItems=document.getElementById("priceItems");
 let cart1 = JSON.parse(localStorage.getItem("cart1")) || [];
+let cartl2= JSON.parse(localStorage.getItem("cart")) || [];
+localStorage.setItem("price",0);
+let MyPrice=localStorage.getItem("price");
+console.log(MyPrice);
 
-
-showData();
-async function showData(){
+console.log(cartl2.length);
+let lh=cartl2.length;
+showData(lh);
+async function showData(lh){
   let result=await fetch("http://localhost:3000/Data");
   let data=await result.json();
   console.log(data);
   cart1=data;
-  item1.innerHTML=data.length;
+  item1.innerHTML=data.length+lh;
   localStorage.setItem("cart1",JSON.stringify(data));
   priceData(data);
   Appendata(data);
   
 }
+
+// function lengthData(l){
+//   let num=l;
+//   num=num+lh;
+
+// }
 // console.log(data);
 
 
@@ -51,6 +62,7 @@ function Appendata(data){
     console.log("hii3");
     let main1 = document.getElementById("main1");
     data.forEach((el,idx) => {
+   
       let div = document.createElement("div");
       div.setAttribute("id", "main11");
   
@@ -76,11 +88,26 @@ function Appendata(data){
   btn1.innerHTML = "+";
   btn1.setAttribute("class", "plus");
   btn1.addEventListener("click",()=>{
+      
+    btn5.innerHTML = +(btn5.innerHTML)+1;
+    // let p1=(btn5.innerHTML-1)*el.price;
+    // console.log(p1);
+    
+    // totalPrice(p1);
     priceData1(el);
   })
+
+  let btn5 = document.createElement("button");
+  btn5.innerHTML ="1";
+  btn5.setAttribute("class", "plus");
+  
+
   let btn2 = document.createElement("button");
   btn2.innerHTML = "-";
   btn2.addEventListener("click",()=>{
+    if( btn5.innerHTML>1){
+      btn5.innerHTML = +(btn5.innerHTML)-1;
+    }
     priceDataDelete(el);
   })
   btn2.setAttribute("class", "plus");
@@ -92,6 +119,7 @@ function Appendata(data){
     console.log(el.id)
 
   })
+
   let btn4=document.createElement("button");
   btn4.setAttribute("class", "plus");
     btn4.setAttribute("id","btn44");
@@ -103,12 +131,13 @@ function Appendata(data){
   btn3.setAttribute("class", "plus");
   
   
-  div3.append(btn1,btn2,btn3,btn4)
+  div3.append(btn1,btn5,btn2,btn3,btn4)
      
       div2.append(strMeal,desc, price, div3);
       div.append(div1, div2);
   
       main1.append(div);
+      console.log(btn5.innerHTML);
     });
   }
 }
@@ -275,8 +304,10 @@ function priceData(data){
 function priceData1(el){
   priceItems.innerHTML=+(priceItems.innerHTML)+el.price;
   // price.innerHTML=+(priceItems.innerHTML)+el.price;
-  
+    
 }
+
+
 
 function priceDataDelete(el){
   if(priceItems.innerHTML>=el.price){
@@ -291,5 +322,16 @@ function priceDataDelete(el){
  
   
 }
+// let myP=localStorage.getItem("price");
+ 
+    
 
+// function totalPrice(p){
+//   myP=+(myP)+p;
+//   localStorage.setItem("price",myP);
+// }
 
+// function dataCount(l){
+//  return count1
+  
+// }

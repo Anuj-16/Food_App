@@ -157,6 +157,9 @@ showMeData(cart);
 
 
 function showMeData(data){
+  item1.innerHTML=null;
+  item1.innerHTML=data.length+1;
+  console.log(data.length)
   priceData(data);
   let main1 = document.getElementById("main1");
   data.forEach((el,idx) => {
@@ -185,11 +188,22 @@ let btn1 = document.createElement("button");
 btn1.innerHTML = "+";
 btn1.setAttribute("class", "plus");
 btn1.addEventListener("click",()=>{
+  btn5.innerHTML = +(btn5.innerHTML)+1;
+  console.log(btn5.innerHTML*el.price);
  priceData1(el);
 })
+let btn5 = document.createElement("button");
+  btn5.innerHTML ="1";
+  btn5.setAttribute("class", "plus");
+  btn5.addEventListener("click",()=>{
+    //priceData1(el);
+  })
 let btn2 = document.createElement("button");
 btn2.innerHTML = "-";
 btn2.addEventListener("click",()=>{
+  if( btn5.innerHTML>1){
+    btn5.innerHTML = +(btn5.innerHTML)-1;
+  }
   priceDataDelete(el);
 })
 btn2.setAttribute("class", "plus");
@@ -216,7 +230,7 @@ btn4.setAttribute("class", "plus");
 btn3.setAttribute("class", "plus");
 
 
-div3.append(btn1,btn2,btn3,btn4)
+div3.append(btn1,btn5,btn2,btn3,btn4)
    
     div2.append(strMeal,desc, price, div3);
     div.append(div1, div2);

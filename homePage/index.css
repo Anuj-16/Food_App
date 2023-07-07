@@ -177,3 +177,23 @@
 b{
     font-size: 18px;
 }
+
+@media screen and (max-width: 1285px){
+    .header{
+        overflow: hidden;
+        position: relative;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links a{
+        float: left;
+        color: rgb(8, 8, 8);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    
+    
+}

@@ -305,9 +305,9 @@ function priceData(data){
   data.forEach((el)=>{
    console.log(typeof el.price)
     priceItems.innerHTML=+(priceItems.innerHTML)+el.price;
-  //   let num1=+(priceItems.innerHTML)+el.price;
-  //   console.log(num1)
-  // localStorage.setItem("price",num1);
+    let num1=+(priceItems.innerHTML)+el.price;
+    console.log(num1)
+  localStorage.setItem("price",num1);
  })
 
 }
@@ -343,10 +343,10 @@ function priceDataDelete(el){
 //   localStorage.setItem("price",myP);
 // }
 
-// function dataCount(l){
-//  return count1
+function dataCount(l){
+ return count1
   
-// }
+}
 
 
   // price.innerHTML=+(priceItems.innerHTML)+el.price;

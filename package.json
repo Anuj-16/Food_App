@@ -1,0 +1,20 @@
+{
+  "name": "food_app",
+  "version": "1.0.0",
+  "description": "Group-5",
+  "main": "signin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anuj-16/Food_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anuj-16/Food_App/issues"
+  },
+  "homepage": "https://github.com/Anuj-16/Food_App#readme"
+}

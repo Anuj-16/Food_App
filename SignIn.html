@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Login Form | CodingLab </title>
+    <link rel="stylesheet" href="signin.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<body>
+  <div class="main_div">
+    <div class="title">Login Form</div>
+    <div class="social_icons">
+      <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569900%7Cb%7Cface%20book%20log%20in%7C&placement=&creative=589460569900&keyword=face%20book%20log%20in&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696221912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-6167883633%26loc_physical_ms%3D1007824%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwqZSlBhBwEiwAfoZUIM-tJmhVIDXIb9pn7G27SABd70_ZXYVdLQPShV47NqCJMIn6wLldoBoCUjoQAvD_BwE"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+      <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+    </div>
+    <form action="#">
+      <div class="input_box">
+        <input type="text" placeholder="Email or Phone" required id="login_email">
+        <div class="icon"><i class="fas fa-user"></i></div>
+      </div>
+      <div class="input_box">
+        <input type="password" placeholder="Password" required id="password">
+        <div class="icon"><i class="fas fa-lock"></i></div>
+      </div>
+      <div class="option_div">
+        <div class="check_box">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </div>
+        <div class="forget_div">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+      <div class="input_box button">
+        <input type="submit" value="Login"id="login">
+      </div>
+      <div class="sign_up">
+        Not a member? <a href="SignUp.html">Signup now</a>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
+<script type="module">
+      // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+ // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyChYl6ToRTK9bPEU64B-61ExdxjvajwI1Q",
+    authDomain: "mydataprojectunit-5.firebaseapp.com",
+    projectId: "mydataprojectunit-5",
+    storageBucket: "mydataprojectunit-5.appspot.com",
+    messagingSenderId: "1057363724677",
+    appId: "1:1057363724677:web:638a5a4e7e03396a741cec"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  console.log(app)
+
+
+  document.getElementById("login").addEventListener("click",()=>{
+    let email=document.getElementById("login_email").value;
+    let password=document.getElementById("password").value;
+    const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert("Login Successfully")
+   
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert("Please fill correct detail")
+  });
+  })
+
+
+
+
+</script>

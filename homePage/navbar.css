@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+    height: 110px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#logo {
+    width: 185px;
+    cursor: pointer;
+    height: 92px;
+
+}
+
+nav {
+    margin-left: 40%;
+}
+.nav-links {
+    list-style: none;
+    
+}
+
+.nav-links, li {
+    display: inline-block;
+    padding: 25px
+}
+
+.social-link {
+    padding-left: 30px;
+}
+
+.facebook-logo {
+    width: 45px;
+   
+}
+
+.insta-logo {
+    width: 45px;
+}
+
+.login {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(254,211,60);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-bag {
+    font-size: 25px;
+    border: none;
+    margin-left: -20px;
+}

@@ -16,7 +16,7 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required id="name">
+            <input type="text" placeholder="Enter your name" id="name" required >
           </div>
           <div class="input-box">
             <span class="details">Username</span>
@@ -24,7 +24,7 @@
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required id="email">
+            <input type="text" placeholder="Enter your email" id="email" required >
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
@@ -32,7 +32,7 @@
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required id="password">
+            <input type="text" placeholder="Enter your password"id="password" required >
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
@@ -69,10 +69,11 @@
 
 </body>
 </html>
+
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
   //import { getAuth, signOut } from "firebase/auth";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -94,42 +95,36 @@
 
 
 const auth = getAuth();
-let pass1=document.getElementById("password").value;
-let Conf_pass=document.getElementById("conform-password").value;
-if(pass1==Conf_pass){
-  document.getElementById("register").addEventListener("click",()=>{
-  
-  let email=document.getElementById("email").value;
-  let password=document.getElementById("password").value;
-  let user=document.getElementById("name").value;
-  
-  
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      alert("Registration Successfully")
-      window.location.href="signIn.html"
-      console.log(user)
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorMessage);
-      alert("Already Registration")
-      window.location.href="signIn.html"
-      // ..
-    });
-  
-  
+
+document.getElementById("register").addEventListener("click",()=>{
+
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+let user=document.getElementById("name").value;
+
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    alert("Registration Successfully")
+    console.log(user)
+    // ...
   })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    alert("Already Registration")
+    window.location.href="signIn.html"
+    // ..
+  });
 
-}
-else{
-  alert("fill the correct password")
-}
 
+})
+
+
+  
 
 
 

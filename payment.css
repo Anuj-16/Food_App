@@ -1,27 +1,95 @@
 body{
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-family: Inter, sans-serif;
 }
-#address_navbar{
+/* #address_navbar{
     display: flex;
     justify-content: space-around;
     border: 1px solid;
     margin-bottom: 50px;
     height: 50px;
     margin-top: 5px;
+} */
+
+
+/* new navbar start*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -35px;
 }
+
+.logo {
+    cursor: pointer;
+    height: 130px;
+    
+
+}
+
+nav {
+    margin-left: 40%;
+}
+.nav-links {
+    list-style: none;
+    
+}
+
+.nav-links, li {
+    color: black;
+    display: inline-block;
+    padding: 25px
+    
+}
+
+.social-link {
+    padding-left: 30px;
+}
+
+.facebook-logo {
+    width: 45px;
+   
+}
+
+.insta-logo {
+    width: 45px;
+}
+
+.login {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(254,211,60);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-bag {
+    font-size: 25px;
+    border: none;
+    margin-left: -20px;
+}
+/* new navbar end */
+
+
 #pay_method>p:first-child{
     font-weight: 600;
     font-size: xx-large;
     margin-bottom: -10px;
+    margin-left: 50px;
+    
 }
 #pay_method>p:last-child{
     margin-bottom: 50px;
+    margin-left: 50px;
 }
 #pay_option{
     font-weight: 600;
     font-size: larger;
+    margin-left: 50px;
 }
 .pay_opt{
     display: flex;
@@ -49,6 +117,7 @@ body{
 }
 #main_container{
     display: flex;
+    margin-left: 50px;
     
 }
 #payment_divShow{
@@ -72,7 +141,7 @@ body{
 #box2>div button{
     margin-top: 10px;
     padding: 10px 90px;
-    background-color: #fdd835;
+    background-color: #ffd814;
     cursor: pointer;
     border-radius: 5px;
     border: none;
@@ -85,7 +154,7 @@ body{
     
 }
 #span{
-    color: #d0af1f;
+    color: #ffd814;
     cursor: pointer;
 }
 #box2>div>div{
@@ -120,10 +189,45 @@ body{
 #wall_btn{
     width: 100%;
     padding: 10px 10px;
-    background-color: #fdd835;
+    background-color: #ffd814;
     border-radius: 5px;
     cursor: pointer;
     border: none;
 }
+#main_add>div{
+    display: flex;
+    
+}
+#main_add>div img{
+    width: 25px;
+    height: 100%;
+    
+    align-items: center;
+    margin: auto;
+    margin-left: 15px;
+  
+}
+#main_add{
+    border: 1px solid;
+    width: 30%;
+    height: 200px;
+    margin-left: 150px;
+    padding-left: 10px;
+}
+#main_add>div button{
+    padding: 5px 10px;
+    margin: 15px 50px;
+    border-radius: 5px;
+}
+#rzp-button1{
+    margin-top: 70px;
+    margin-bottom: 10px;
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: #ffd814;
+    border: none;
+
+}
+
 
 

@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap'>
     <title>address</title>
 </head>
 <body>
     <div id="main_container">
-        <div id="address_nav">
-            <p>Sign up</p>
-            <p>Address</p>
-            <p>Payment</p>
-        </div>
+        <header>
+            <img class="logo" id="logo" src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" 
+            alt="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li>Menu</li>
+                    <li>About Us</li>
+                    <li>Address</li>
+                </ul>
+            </nav>
+            <div class="social-link">
+                <img class="facebook-logo" src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" 
+                alt="facebook">
+                <img class="insta-logo" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg" 
+                alt="instagram">
+            </div>
+            <button class="login">Login</button>
+            <button class="add-bag" id="add-to-bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </header>
+
+
+
         <div id="store1">
             <div id="address">
                 <p class="child1">Choose Address</p>
@@ -32,8 +50,32 @@
             <div id="store2_address"></div>
 
         </div>
-
     </div>
+   
+    <form action="" id="form">
+    <div id="body1">
+     <div class="store_div">
+         <p>Address</p>
+         <p><input type="number" placeholder="Pincode" id="num" class="input_store" required></p>
+         <p><input type="text" placeholder="House/Flate/Office No" id="home" class="input_store" required></p>
+         <p><input type="text" placeholder="Road Name/ Area/ Colony" id="area" class="input_store" required></p>
+ 
+     </div>
+     <div class="store_div">
+         <p>Contact</p>
+         
+         <p>Information provided here will be used to contact you for delivery updates</p>
+        
+         <p><input type="text" placeholder="Full name" id="name" class="input_store" required></p>
+         <p><input type="number" placeholder="Mobile number" id="mobile" class="input_store" required></p>
+         <p><input type="email" placeholder="Email" id="email" class="input_store" required></p>
+ 
+     </div>
+     
+     <!-- <a href="./payment.html" >Ship to this address</a> -->
+     <button id="address_btn" onclick="getAddress(event)">Ship to this address</button>
+      </div></form>
+      
 </body>
 </html>
 <script src="address.js"></script>

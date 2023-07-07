@@ -7,16 +7,34 @@
     <title>Payment page</title>
 </head>
 <body>
-    <div id="address_navbar">
-        <p>Sign up</p>
-        <p>Address</p>
-        <p>Payment</p>
-    </div>
-    <div id="pay_method">
+    <header>
+        <img class="logo" id="logo" src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" 
+        alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <li>Menu</li>
+                <li>About Us</li>
+                <a href="./address.html"><li>Address</li></a>
+            </ul>
+        </nav>
+        <div class="social-link">
+            <img class="facebook-logo" src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" 
+            alt="facebook">
+            <img class="insta-logo" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg" 
+            alt="instagram">
+        </div>
+        <button class="login">Login</button>
+        <button class="add-bag" id="add-to-bag"><i class="fa-solid fa-bag-shopping"></i></button>
+    </header>
+
+
+   <div id="items_price"></div>
+
+    <!-- <div id="pay_method">
         <p>Choose Payment Method</p>
         <p>Choose the payment method you prefer</p>
-    </div>
-    <div id="pay_option">
+    </div> -->
+    <!-- <div id="pay_option">
         <p>Payment Method Options</p>
     </div>
 
@@ -52,10 +70,56 @@
         <div id="payment_divShow">
 
         </div>
+        
 
+    </div> -->
+    
+
+    <div id="main_add">
+      <div>
+        <h3>Delivering order to</h3>
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTyJJxc_0g2q-TCVgnPYv2xIvPef5jt670RlvcYiZ9jQFa_qZY3" alt="">
+        <a href="./address.html"><button>change</button></a>
+      </div>
+        <div id="delivery_div">
+            
+            
+        </div>
+        <button id="rzp-button1">pay</button>
+        
     </div>
+    
 
 </body>
 </html>
 <script src="payment.js"></script>
 <script src="function.js"></script>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+// let checkout = 11000 * 100;
+  var options = {
+    key: "rzp_test_4RlpUB3zPAcePY", // Enter the Key ID generated from the Dashboard
+    amount: 11000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    currency: "INR",
+    name: "Playo",
+    description: "Test Payment",
+    image:
+      "https://blog.playo.co/wp-content/uploads/2018/04/Playo-dp-gradient4-1.png",
+    // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+    // "account_id": "acc_Ef7ArAsdU5t0XL",
+    handler: function (response) {
+      alert(response.razorpay_payment_id);
+      alert(response.razorpay_order_id);
+      alert(response.razorpay_signature);
+      window.location.href="./addressPage.html";
+    },
+  };
+  var rzp1 = new Razorpay(options);
+
+  document.getElementById("rzp-button1").onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  };
+</script>

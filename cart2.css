@@ -1,0 +1,123 @@
+@media only screen and (max-width:1200px) {
+    #main22{
+        display: none;
+    }
+    #dataonly1{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #pagination{
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+    }
+
+}
+@media only screen and (min-width:  830px) and (max-width: 1068px) {
+#main11{
+    display: block;
+    width: 60%;
+}
+#dataonly1{
+    grid-template-columns: repeat(3,1fr);
+}
+#main2{
+    margin-left: -100px;
+    margin-right: 40px;
+}
+.plus{
+    margin-right: 5px;
+}
+}
+@media only screen and (max-width: 930px) {
+    #socal{
+        display: none;
+    }
+    #dataonly1{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #para1{
+        margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 830px) and (min-width:740px){
+    #main2{
+        display: none;
+    }
+    #main1{
+        width: 136%;
+    }
+    .plus{
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width: 740px){
+    #main2{
+        display: none;
+    }
+    #main11{
+        display: block;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .plus{
+        margin-right: 5px;
+    }
+    .nav-links{
+        display: none;
+    }
+    #dataonly1{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #pagination{
+        display:none;
+        
+    }
+    #main11{
+        width: 128%;
+    }
+   
+}
+@media only screen and (max-width:545px){
+    .plus{
+        padding: 5px;
+    }
+    #main11{
+        width: 128%;
+    }
+    #btn44{
+        padding: 6px 30px;
+    }
+    #main1{
+        margin-left: -10%;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width:360px){
+    #main111 img{
+        width:100%;
+    }
+    #dataonly121 img{
+        width:100%;
+    }
+    #para1{
+        margin-left: 20%;
+    }
+    .plus{
+        padding: 5px;
+        margin-bottom: 8px;
+    }
+}
+@media only screen and (max-width:275px){
+   .plus:nth-child(4){
+    margin-left: 10%;
+     color:red
+   }
+   #para1{
+    margin-left: 20%;
+}
+.plus{
+    padding: 8px;
+    margin-bottom: 8px;
+}
+}

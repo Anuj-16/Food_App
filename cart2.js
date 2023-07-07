@@ -195,15 +195,17 @@ btn1.addEventListener("click",()=>{
 let btn5 = document.createElement("button");
   btn5.innerHTML ="1";
   btn5.setAttribute("class", "plus");
-  btn5.addEventListener("click",()=>{
-    //priceData1(el);
-  })
+  
 let btn2 = document.createElement("button");
 btn2.innerHTML = "-";
 btn2.addEventListener("click",()=>{
-  if( btn5.innerHTML>1){
-    btn5.innerHTML = +(btn5.innerHTML)-1;
-  }
+  // if( btn5.innerHTML>1){
+  //   btn5.innerHTML = +(btn5.innerHTML)-1;
+  // }
+  // if(btn5.innerHTML==1){
+
+  //   btn2.disabled=true;
+  // }
   priceDataDelete(el);
 })
 btn2.setAttribute("class", "plus");

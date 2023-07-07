@@ -107,8 +107,17 @@ function Appendata(data){
   btn2.addEventListener("click",()=>{
     if( btn5.innerHTML>1){
       btn5.innerHTML = +(btn5.innerHTML)-1;
+      priceDataDelete(el);
     }
-    priceDataDelete(el);
+    //   if(btn5.innerHTML=="1"){
+    //   console.log( btn5.innerHTML)
+
+    //   btn2.disabled=true;
+    // }
+    // else{
+    //   btn2.disabled=false;
+    // }
+  
   })
   btn2.setAttribute("class", "plus");
   let btn3 = document.createElement("button");
@@ -296,6 +305,9 @@ function priceData(data){
   data.forEach((el)=>{
    console.log(typeof el.price)
     priceItems.innerHTML=+(priceItems.innerHTML)+el.price;
+  //   let num1=+(priceItems.innerHTML)+el.price;
+  //   console.log(num1)
+  // localStorage.setItem("price",num1);
  })
 
 }
@@ -303,7 +315,7 @@ function priceData(data){
 //console.log(newPrice.innerHTML)
 function priceData1(el){
   priceItems.innerHTML=+(priceItems.innerHTML)+el.price;
-  // price.innerHTML=+(priceItems.innerHTML)+el.price;
+  
     
 }
 
@@ -335,3 +347,7 @@ function priceDataDelete(el){
 //  return count1
   
 // }
+
+
+  // price.innerHTML=+(priceItems.innerHTML)+el.price;
+  

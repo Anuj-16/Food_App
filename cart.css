@@ -8,7 +8,42 @@ body {
   grid-template-columns: 70% 27%;
   gap: 20px;
 }
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#img1{
+  display: flex;
+}
+.social-link img{
+  width: 45px;
+  padding-right: 20px;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 27px;
+  
+}
+.nav-links li{
+  padding-right: 70px;
+}
+#logo{
+  width: 145px;
+  height: 80px;
+}
+.social-link{
+  display: flex;
+  margin-top: 13px;
+}
 
+#name1{
+  margin-top: 12px;
+  margin-right: 20px;
+}
 /* #main2{
     border: 1px solid rgb(21, 15, 15);
 } */
@@ -66,7 +101,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* border: 2px solid red; */
   padding: 25px;
-  /* height: 650px; */
+ 
   border-radius: 8px;
 }
 #main2212 {
@@ -146,7 +181,8 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #dataonly1{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
   gap: 30px;
   
   margin: auto;

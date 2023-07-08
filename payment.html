@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
-        <img class="logo" id="logo" src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" 
+        <a href="/Food_App/homePage/index.html">
+          <img class="logo" id="logo" src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" 
         alt="logo">
+        </a>
         <nav>
             <ul class="nav-links">
                 <li>Menu</li>
@@ -23,8 +25,8 @@
             <img class="insta-logo" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg" 
             alt="instagram">
         </div>
-        <button class="login">Login</button>
-        <button class="add-bag" id="add-to-bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        <!-- <button class="login">Login</button> -->
+        <!-- <button class="add-bag" id="add-to-bag"><i class="fa-solid fa-bag-shopping"></i></button> -->
     </header>
 
 
@@ -82,7 +84,7 @@
         <a href="./address.html"><button>CHANGE</button></a>
       </div>
         <div id="delivery_div">
-            
+            <div id="tPrice"></div>
             
         </div>
         <button id="rzp-button1">Pay</button>
@@ -99,10 +101,10 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
 // let checkout = 11000 * 100;
-// let finalPrice=localStorage.getItem("price");
+ let finalPrice= localStorage.getItem("price1");
   var options = {
     key: "rzp_test_4RlpUB3zPAcePY", // Enter the Key ID generated from the Dashboard
-    amount: 11000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    amount: finalPrice*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     currency: "INR",
     name: "Food App",
     description: "Test Payment",

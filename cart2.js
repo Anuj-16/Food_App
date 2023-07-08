@@ -199,14 +199,15 @@ let btn5 = document.createElement("button");
 let btn2 = document.createElement("button");
 btn2.innerHTML = "-";
 btn2.addEventListener("click",()=>{
-  // if( btn5.innerHTML>1){
-  //   btn5.innerHTML = +(btn5.innerHTML)-1;
-  // }
+  if( btn5.innerHTML>1){
+    btn5.innerHTML = +(btn5.innerHTML)-1;
+    priceDataDelete(el);
+  }
   // if(btn5.innerHTML==1){
 
   //   btn2.disabled=true;
   // }
-  priceDataDelete(el);
+  
 })
 btn2.setAttribute("class", "plus");
 
@@ -225,8 +226,8 @@ let btn4=document.createElement("button");
 btn4.setAttribute("class", "plus");
   btn4.setAttribute("id","btn44");
   btn4.innerHTML="Buy"
-  btn4.addEventListener("click",()=>{
-    
+  btn4.addEventListener("click", function(){
+    window.location.href = "/Food_App/address.html"
   })
 
 btn3.setAttribute("class", "plus");

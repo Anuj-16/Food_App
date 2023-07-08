@@ -49,12 +49,11 @@ data.map((ele)=>{
     let btn=document.createElement("button")
     btn.setAttribute("class", "addtoCart")
     btn.textContent="Add to Cart"
-    btn.addEventListener("click",()=>{
-        arr.push(ele)
-        localStorage.setItem("cart",JSON.stringify(arr))
-
-      
+    btn.addEventListener("click", function(){
+      addCart(ele);
     })
+        
+   
 
   //hover data//
   let h3hover=document.createElement("h3")
@@ -102,22 +101,32 @@ data.map((ele)=>{
                });
            parent.append(div)
 
-      
-
-           
-
-           
-
-
-          
-    
+ 
 })
 
-
-
-
-      
+     
 }
+
+let cart= JSON.parse(localStorage.getItem("cart"))||[];
+
+function addCart(ele){
+  console.log(ele.img)
+  let storeProduct = cart.filter((elm) => {
+    return elm.img == ele.img;
+  });
+
+  if (storeProduct.length > 0) {
+    alert("This product already in cart.");
+  } else{
+    cart.push(ele);
+    localStorage.setItem("cart",JSON.stringify(cart));
+    let Array=JSON.parse(localStorage.getItem("cart")) || [];
+
+    alert("Item Added to Cart Successfully")
+  
+  }
+}
+
 
 document.getElementById("Italian").addEventListener("click",()=>{
 let newdata=data.filter((ele)=>{

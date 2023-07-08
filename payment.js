@@ -1,13 +1,24 @@
 var AdressDetails=JSON.parse(localStorage.getItem("address"))|| [];
 console.log(AdressDetails);
+let p1 = localStorage.getItem("price")
+let cart = JSON.parse(localStorage.getItem('cart'))
+console.log(cart)
 
 AdressDetails.map((elem)=>{
-    document.getElementById("delivery_div").textContent=`${elem.fullName},${elem.home},${elem.area},${elem.num}`;
+    document.getElementById("delivery_div").textContent=`${elem.fullName},${elem.home},${elem.area},${elem.num},`;
+
+    let br  = document.createElement('br')
+    let div = document.createElement("div")
+    let h2=document.createElement("h2")
+    h2.innerHTML= `Total Price: ₹${p1}`
+    div.append(h2);
+    div.setAttribute("class","priceArra");
     
-    
+    document.getElementById("delivery_div").append(br, div)
 })
 
-localStorage.setItem("price",10);
+
+localStorage.setItem("price1",p1);
 let MyPrice=localStorage.getItem("price");
 console.log(MyPrice);
 

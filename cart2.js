@@ -227,7 +227,7 @@ btn4.setAttribute("class", "plus");
   btn4.setAttribute("id","btn44");
   btn4.innerHTML="Buy"
   btn4.addEventListener("click", function(){
-    window.location.href = "/Food_App/address.html"
+    window.location.href = "address.html"
   })
 
 btn3.setAttribute("class", "plus");

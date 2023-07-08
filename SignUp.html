@@ -36,7 +36,7 @@
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required id="conform-password">
+            <input type="password" placeholder="Confirm your password" required id="conform-password">
           </div>
         </div>
         <div class="gender-details">
@@ -91,13 +91,13 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
-  console.log(app)
+  //console.log(app)
 
 
 const auth = getAuth();
 
 document.getElementById("register").addEventListener("click",()=>{
-
+  event.preventDefault();
 let email=document.getElementById("email").value;
 let password=document.getElementById("password").value;
 let user=document.getElementById("name").value;

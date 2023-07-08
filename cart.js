@@ -134,7 +134,7 @@ function Appendata(data){
     btn4.setAttribute("id","btn44");
     btn4.innerHTML="Buy"
     btn4.addEventListener("click", function(){
-      window.location.href = "/Food_App/address.html"
+      window.location.href = "address.html"
     })
       
     
@@ -155,7 +155,7 @@ function Appendata(data){
 }
 
 function proceed(){
-  window.location.href = '/Food_App/address.html'
+  window.location.href = 'address.html'
 }
 
 let cartData =[

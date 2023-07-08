@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+body{
+    margin-bottom: 150px;
+    font-family: 'Lobster' ;
+    font-size: 18px;
+   
+}
+
+#address_nav{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+/* new navbar css */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo {
+    cursor: pointer;
+    height: 130px;
+    
+
+}
+
+nav {
+    margin-left: 40%;
+}
+.nav-links {
+    list-style: none;
+    
+}
+
+.nav-links, li {
+    display: inline-block;
+    padding: 25px
+}
+
+.social-link {
+    padding-left: 30px;
+}
+
+.facebook-logo {
+    width: 45px;
+   
+}
+
+.insta-logo {
+    width: 45px;
+}
+
+.login {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(254,211,60);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-bag {
+    font-size: 25px;
+    border: none;
+    margin-left: -20px;
+}
+/* end new navbar css */
+
+
+#address{
+    display: flex;
+    flex-direction: column;
+}
+#store1{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* adress_store plus */
+
+#body1{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+    margin: auto;
+    margin-top: -280px;
+    
+    
+
+    
+}
+.clickFn{
+    margin-left: 200px;
+    border: 1px dashed gray;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    padding: 50px 20px 50px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+
+}
+.store_div{
+    display: flex;
+    flex-direction: column;
+    display: inline;
+    width: 40%;
+    /* border: 1px solid; */
+    
+   
+}
+.store_div p:first-child{
+    font-size: xx-large;
+    font-weight: 600;
+   
+}
+.store_div >p>input{
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(234, 234, 176);
+}
+#address_btn{
+    border-radius: 5px;
+    padding: 15px 50px;
+    margin-right: 90px;
+    background-color: #d0af1f;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+}
+#address .child1{
+    font-size: xx-large;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+#store_part>div>p+p{
+    font-weight: 600;
+    font-size: large;
+    color: #d0af1f;
+}
+#store_part>div:nth-child(1):hover{
+    background-color: gray;
+}
+
+
+
+
+
+
+
+

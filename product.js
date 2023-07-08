@@ -1,19 +1,35 @@
 let parent=document.getElementById("parent")
 let data;
-let search=async ()=>{
+let newdata;
+let check=0;
+let arr=JSON.parse(localStorage.getItem("cart"))||[]
+let search=async (order)=>{
+    // if(order==undefined){
     try{
    let response=await fetch("http://localhost:3000/foods")
   data=await response.json()
    console.log(data)
+   check=0;
    display(data)
     }catch(err){
         console.log(err)
     }
 }
+// else{
+//     try{
+//         let response=await fetch('http://localhost:3000/foods?_sort=price&_order=${order}')
+//        data=await response.json()
+//         console.log(data)
+//         display(data)
+//          }catch(err){
+//              console.log(err)
+//          } 
+// }
+
 search()
 
 let display=(data)=>{
-
+console.log(check)
     parent.innerHTML = "";
 data.map((ele)=>{
     let div=document.createElement("div")
@@ -31,9 +47,11 @@ data.map((ele)=>{
     let p=document.createElement("p")
     p.textContent="Rs"+" "+ ele.price
     let btn=document.createElement("button")
+    btn.setAttribute("class", "addtoCart")
     btn.textContent="Add to Cart"
     btn.addEventListener("click",()=>{
-        localStorage.setItem("cart",JSON.stringify(ele))
+        arr.push(ele)
+        localStorage.setItem("cart",JSON.stringify(arr))
 
       
     })
@@ -44,6 +62,7 @@ data.map((ele)=>{
   let hr1=document.createElement("hr")
   let hr2=document.createElement("hr")
   let desc=document.createElement("p")
+  desc.setAttribute("class","desc")
   desc.textContent=ele.description
 
   let key=document.createElement("h3")
@@ -105,42 +124,81 @@ let newdata=data.filter((ele)=>{
 return ele.key==="Italian"
 })
 console.log(newdata)
+check=1
 display(newdata)
 })
 
 document.getElementById("Chinese").addEventListener("click",()=>{
-    let newdata=data.filter((ele)=>{
+    newdata=data.filter((ele)=>{
     return ele.key==="Chinese"
     })
     console.log(newdata)
+    check=1;
     display(newdata)
     })
 
     document.getElementById("Deserts").addEventListener("click",()=>{
-        let newdata=data.filter((ele)=>{
+      newdata=data.filter((ele)=>{
         return ele.key==="Desert"
         })
         console.log(newdata)
+        check=1;
         display(newdata)
         })
 
         document.getElementById("Main-Course").addEventListener("click",()=>{
-            let newdata=data.filter((ele)=>{
+           newdata=data.filter((ele)=>{
             return ele.key==="Main-Course"
             })
             console.log(newdata)
+            check=1;
             display(newdata)
             })
 
             document.getElementById("all").addEventListener("click",()=>{
-                
+                check=0
                 display(data)
                 })
 
                 document.getElementById("Breads").addEventListener("click",()=>{
-                    let newdata=data.filter((ele)=>{
+                   newdata=data.filter((ele)=>{
                     return ele.key==="Breads"
                     })
                     console.log(newdata)
+                    check=1;
                     display(newdata)
                     })
+
+
+
+                    document.getElementById("lowtohigh").addEventListener("click",()=>{
+                          if(check==1){
+                            newdata.sort(ascending)
+                            console.log(newdata)
+                            display(newdata)
+                          }else{
+                            data.sort(ascending)
+                            console.log(data)
+                            display(data)
+                          }
+                    })
+                    document.getElementById("hightolow").addEventListener("click",()=>{
+                        if(check==1){
+                          newdata.sort(descending)
+                          console.log(newdata)
+                          display(newdata)
+                        }else{
+                          data.sort(descending)
+                          console.log(data)
+                          display(data)
+                        }
+                  })
+
+
+                    function ascending(a, b) {
+                        return a.price - b.price;
+                      }
+
+                      function descending(a, b) {
+                        return b.price - a.price;
+                      }

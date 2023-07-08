@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c9ed7782d6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="navbar"></div>
+    <header>
+        <img class="logo" id="logo" src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" 
+        alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <a href="#"><li style="color: black;">Menu</li></a>
+                <a href="#"><li style="color: black;">About Us</li></a>
+                <a href="#"><li style="color: black;">Contacts</li></a>
+            </ul>
+        </nav>
+        <div class="social-link">
+            <img class="facebook-logo" src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" 
+            alt="facebook">
+            <img class="insta-logo" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg" 
+            alt="instagram">
+        </div>
+        
+        <button class="login" onclick="login()">Login</button>
+        <button class="add-bag" id="add-to-bag" onclick="addToCart()"><i class="fa-solid fa-bag-shopping"></i></button>
+    </header>
+
     <div id="btn_div">
         <button class="pizza-button" id="all">All</button>
         <button class="pizza-button" id="Italian">Italian</button>
@@ -17,7 +39,42 @@
         <button class="pizza-button" id="Breads">Breads</button>
         <button class="pizza-button" id="Deserts">Deserts</button>
     </div>
-    <div id="parent"></div>
+    <hr>
+    <div id="leftdiv">
+        <button class="pizza-button" id="lowtohigh">Low to High</button>
+   
+        <button class="pizza-button" id="hightolow">High to Low</button>
+    </div>
+    <div id="container">
+  
+        <div id="parent"></div>
+    </div>
+
+    <div class="container5">
+        <div class="main-footer">
+            <div class="footer">
+                <h5>New</h5>
+                <h5>Shawarma</h5>
+                <h5>Street Food</h5>
+                <h5>Pizza</h5>
+                <h5>Burger</h5>
+                <h5>East</h5>
+            </div>
+            <div class="logo-img">
+                <img src="https://elements-preview-images-0.imgix.net/2716e012-46c1-4731-8b0b-2bdda7ab1e81?auto=compress%2Cformat&fit=max&w=900&s=d22c353b11d5e48c562221bf738f01fb" alt="">
+              
+            </div>
+            <div class="arrow">
+                <a href="#"><i class="fa-sharp fa-solid fa-arrow-up" style="color: #f79f08;"></i></a>
+            </div>
+        </div>
+        <div class="privacy">
+            <h5 style="color: gray;">Privacy policy</h5>
+            <h5>2023 Mr.Chef</h5>
+            <h5>Made with 🫶 by <b><i>Anuj Patel</i></b></h5>
+        </div>
+    </div>
+
 </body>
 </html>
 <script src="./product.js"></script>

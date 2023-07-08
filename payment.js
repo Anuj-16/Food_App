@@ -3,8 +3,7 @@ console.log(AdressDetails);
 
 AdressDetails.map((elem)=>{
     document.getElementById("delivery_div").textContent=`${elem.fullName},${elem.home},${elem.area},${elem.num}`;
-    // document.getElementById("address1").textContent=elem.home;
-    // document.getElementById("address2").textContent=`${elem.area} ${elem.num}`;
+    
     
 })
 
@@ -13,6 +12,8 @@ let MyPrice=localStorage.getItem("price");
 console.log(MyPrice);
 
 var price= document.getElementById("items_price");
+
+
 
 
 

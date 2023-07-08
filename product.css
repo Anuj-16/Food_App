@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+    height: 110px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
+}
+
+#logo {
+    width: 185px;
+    cursor: pointer;
+    height: 92px;
+
+}
+
+nav {
+    margin-left: 40%;
+}
+.nav-links {
+    list-style: none;
+    
+}
+
+.nav-links, li {
+    display: inline-block;
+    padding: 25px
+}
+
+.social-link {
+    padding-left: 30px;
+}
+
+.facebook-logo {
+    width: 45px;
+   
+}
+
+.insta-logo {
+    width: 45px;
+}
+
+.login {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(254,211,60);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.add-bag {
+    font-size: 25px;
+    border: none;
+    margin-left: -20px;
+}
+
+
+#container{
+    display: flex;
+}
+
+
+#parent{
+    font-family: 'roboto' serif;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px ;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+/* #leftdiv{
+     width: 30%;
+    height: 500px;
+    margin-top: 87px; 
+  
+  } */
+  
+#parent div{
+    color: white;
+    background-color: rgb(1,15,41);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 8px;
+    width: 100%;
+   
+}
+.card{
+  width: 100%;
+}
+
+#parent img{
+    height: 155px;
+    width: 50%;
+    border-radius: 100%;
+    margin-top: -10%;
+
+}
+.desc{
+  font-size: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.addtoCart{
+   background-color: rgb(255,212,62);
+   border-radius: 15px;
+   border: none;
+   height: 40px;
+   width: 130px;
+   padding: 5px;
+   margin-bottom: -0%;
+}
+#btn_div{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-family: 'Satisfy', cursive;
+}
+
+.pizza-button {
+    /* display: inline-block; */
+    
+    color: rgb(1,15,41);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+  
+    width: fit-content;
+    height: fit-content ;
+    
+   
+  }
+  
+  
+  .pizza-button:active {
+    background-color: #E6970F;
+  }
+  .desc{
+    height: 100px;
+  }
+  #lowtohigh{
+    margin-top: 20px;
+    
+
+  }
+
+   @media screen and (max-width: 480px) {
+    #parent {
+      grid-template-columns: 1fr;
+    }
+    .social-link{
+      display: none;
+    }
+    header{
+      width: 168%;
+    }
+    .nav-links{
+      display: none;
+    }
+    /* #parent div{
+      margin-left: 120px;
+    } */
+    .logo-img img{
+      display: none;
+    }
+    /* #btn_div{
+        display: none;
+    }
+    .pizza-button {
+        display: none;
+    } */
+    #container{
+        display: block;
+
+    }
+    #leftdiv{
+        height: 100px;
+    }
+    #btn_div{
+        display: none;
+    }
+    #lowtohigh{
+      width: fit-content;
+      height: fit-content;
+      margin-left: 60px;
+    }
+    #hightolow{
+        width: fit-content;
+        height: fit-content;
+        margin-left: 60px;
+        
+      }
+      #parent{
+        margin-top: 90px;
+      }
+  }
+
+  .container5 {
+    background-color: rgb(0,6,16);
+}
+
+.main-footer {
+    display: flex;
+    
+}
+
+.footer {
+    color: white;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.logo-img img {
+    height: 135px;
+    margin: 50px 550px;
+    border-radius: 300px 1px ;
+    
+}
+
+.arrow {
+    margin-right: 40px;
+    margin-top: 120px;
+    font-size: 30px;
+}
+
+.privacy {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 10px 0 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+b{
+    font-size: 18px;
+}
+
+  @media screen and (min-width: 481px) and (max-width: 668px) {
+    #parent {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #btn_div{
+        display: none;
+    }
+    .pizza-button {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 669px) and (max-width: 900px){
+    #parent {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #btn_div{
+        display: none;
+    }
+    .pizza-button {
+        display: none;
+    }
+  }
+  
+
+  
+
+  
+  

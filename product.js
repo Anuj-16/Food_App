@@ -6,7 +6,7 @@ let arr=JSON.parse(localStorage.getItem("cart"))||[]
 let search=async (order)=>{
     // if(order==undefined){
     try{
-   let response=await fetch("http://localhost:3000/foods")
+   let response=await fetch("http://localhost:8080/food")
   data=await response.json()
    console.log(data)
    check=0;

@@ -100,11 +100,12 @@ const payload = {
     body: JSON.stringify(payload), // body data type must match "Content-Type" header
   })
   .then((res) => res.json())
-  
+  alert("Signed up")
+  window.location.href="signin.html"
         .then((res) =>{ 
           console.log(res)
-          alert("Signed up")
-          window.location.href="signin.html"
+          
+          
         }
           )
         .catch((err) => console.log(err)) 

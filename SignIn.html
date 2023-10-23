@@ -61,7 +61,7 @@
            
         }
         console.log(payload)
-
+        
  fetch(`http://localhost:8080/login`, {
     method: "POST", 
     headers: {
@@ -76,7 +76,7 @@
         .then((res) => {
         console.log(res)
         alert(res.msg)
-        window.location.hred="index.html"
+        window.location.href="index.html"
   })
         .catch((err) =>{ 
           alert("Error in Signing in")

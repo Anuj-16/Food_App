@@ -48,5 +48,5 @@ Sanjeev Kushwaha - Cart Page / sign in $ sign up
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/foodie-app.git
+   git clone https://github.com/Anuj-16/Food_App.git
 

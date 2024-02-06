@@ -25,7 +25,30 @@ function getAddress(event){
     console.log(arrAdress);
 
     localStorage.setItem("address",JSON.stringify(arrAdress));
-    window.location.href='./payment.html';
+
+    fetch(`http://localhost:8080/address`, {
+        method: "POST", 
+        headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+       
+        body: JSON.stringify(obj), // body data type must match "Content-Type" header
+      })
+      .then((res) => res.json())
+      window.location.href='./payment.html';
+      alert("Address added")
+      
+            .then((res) =>{ 
+              console.log(res)
+              
+              
+            }
+              )
+            .catch((err) => console.log(err)) 
+
+
+   
 
 
 }

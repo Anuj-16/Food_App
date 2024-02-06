@@ -1,6 +1,7 @@
 var AdressDetails=JSON.parse(localStorage.getItem("address"))|| [];
 console.log(AdressDetails);
 let p1 = localStorage.getItem("price")
+
 let cart = JSON.parse(localStorage.getItem('cart'))
 console.log(cart)
 

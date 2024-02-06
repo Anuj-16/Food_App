@@ -1,18 +1,25 @@
 {
   "Data": [
     {
-      "img": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
-      "title": "Baingan Bharta",
-      "description": "Baingan bharta is a popular north Indian dish where fire roasted eggplant is mashed and cooked with spices.",
-      "price": 750,
-      "id": 3
-    },
-    {
       "img": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
       "title": "Chicken Handi",
       "description": " Handi chicken is a delicious dish made with chicken cooked on a low flame for a long time.",
       "price": 899,
       "id": 4
+    },
+    {
+      "img": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+      "title": "Baingan Bharta",
+      "description": "Baingan bharta is a popular north Indian dish where fire roasted eggplant is mashed and cooked with spices.",
+      "price": 750,
+      "id": 5
+    },
+    {
+      "img": "https://www.themealdb.com/images/media/meals/rvtvuw1511190488.jpg",
+      "title": "Clam chowder",
+      "description": "Rinse the clams in several changes of cold water and drain well. Tip the clams into a large pan with 500ml of water. Cover, bring to the boil and simmer for 2 mins until the clams have just opened. Tip the contents of the pan into a colander over a bowl to catch the clam stock.",
+      "price": 245,
+      "id": 6
     }
   ]
 }
